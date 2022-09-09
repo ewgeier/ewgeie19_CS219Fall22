@@ -12,13 +12,33 @@ public class Weather {
 
     public static void main(String [] args){
         // used for getting input from the keyboard
+
         Scanner kbd = new Scanner(System.in);
 
+        double temperature;
+// Checking that the user input is a number
         System.out.print("Enter temperature in degrees F: ");
-        double temperature = kbd.nextDouble();
+        if (kbd.hasNextDouble() == true) {
+            temperature = kbd.nextDouble();
+        }
+        else {
+            System.out.printf("Error: please enter a decimal number. You entered \"%s\"",
+                    kbd.next());
+
+        return; //exit main
+        }
+
+        double velocity;
 
         System.out.print("Enter wind velocity in MPH: ");
-        double velocity = kbd.nextDouble();
+        if (kbd.hasNextDouble() == true){
+            velocity = kbd.nextDouble();
+        }
+        else {
+            System.out.printf("Error: please enter a decimal number. You entered \"%s\"",
+                    kbd.next());
+        }
+        velocity = kbd.nextDouble();
 
         System.out.printf("The windchill for %.1f degrees F and %.1f MPH is %.2f\n",
                 temperature, velocity, windchill(temperature, velocity));
