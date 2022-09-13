@@ -18,7 +18,7 @@ public class LogicalOperators {
         int die1 = r.nextInt(6) + 1;
         int die2 = r.nextInt(6) + 1;
 
-        if (die1 == 1 && die1 == 1){
+        if (die1 == 1 && die2 == 1){
             System.out.println("Snake eyes");
         }
 

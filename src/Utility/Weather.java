@@ -37,8 +37,10 @@ public class Weather {
         else {
             System.out.printf("Error: please enter a decimal number. You entered \"%s\"",
                     kbd.next());
+
+        return;
         }
-        velocity = kbd.nextDouble();
+
 
         System.out.printf("The windchill for %.1f degrees F and %.1f MPH is %.2f\n",
                 temperature, velocity, windchill(temperature, velocity));
