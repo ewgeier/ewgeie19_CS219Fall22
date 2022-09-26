@@ -1,6 +1,6 @@
 package LoopExercises;
 
-public class September15LoopExercises {
+public class LoopExercises {
 
     /*
      * Return the sum of the digits mod 10 of an integer. This is one example of
@@ -22,6 +22,14 @@ public class September15LoopExercises {
     }
 
     /*
+    append checksum
+     */
+    public static int appendChecksum(int n){
+        return n * 10 + checksum(n);
+
+    }
+
+    /*
      * count7s  returns the number of times the digit 7 appears in
      * the parameter n.
      *
@@ -32,7 +40,14 @@ public class September15LoopExercises {
      * Question: Does the function work if n is negative?
      */
     public static int count7s(int n) {
-        return -1;  // just to shut up error message
+        int count = 0;
+        while (n > 0){
+            if(n % 10 == 7) {
+                count++;
+            }
+            n = n / 10;
+        }
+        return count;
     }
 
     /*
@@ -46,9 +61,26 @@ public class September15LoopExercises {
      *  sum3or5(10) = 23
      *  sum3or5(1000) = 233168
      */
+
+     /*
+   public static int sum3or5(int n) {
+       for(int i = 0; i < n; i++){
+           if ()
+       }
+   }
+       */
     public static int sum3or5(int n) {
-        return -1;  // shut up error message
+        int i = 0;
+        int sum = 0;
+        while(i < n){
+            if (i % 3 == 0 || i % 5 == 0){
+                sum = sum + i;
+            }
+            i++;
+        }
+        return sum;
     }
+
 
     /*
      * Return the first factor of n greater than 1
@@ -187,7 +219,14 @@ public class September15LoopExercises {
      * Thoroughly test all of your functions above.
      */
     public static void main(String[] args) {
-System.out.println(checksum(4298) == 3);
+    System.out.println(checksum(4298) == 3);
+    System.out.println(appendChecksum(91217) == 912170);
+    System.out.println(appendChecksum(91217) != 912179);
+    System.out.println(count7s(1727337) == 3);
+    System.out.println(count7s(1234) == 0);
+    System.out.println(count7s(777777) == 6);
+    System.out.println(sum3or5(10) == 23);
+    System.out.println(sum3or5(1000) == 233168);
     }
 }
 
