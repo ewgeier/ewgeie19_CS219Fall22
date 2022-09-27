@@ -16,5 +16,6 @@ public class PraciceTests {
         System.out.println(s.indexOf('o'));
         System.out.println(s.substring(s.indexOf('m'),16));
         System.out.println(s.charAt(s.length()));
+        System.out.println('A' - 0);
     }
 }
