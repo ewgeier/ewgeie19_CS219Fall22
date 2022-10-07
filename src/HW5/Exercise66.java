@@ -7,7 +7,6 @@ HW5
 
 public class Exercise66 {
     public static boolean canSpell(String word, String tiles){
-        int l = tiles.length();
         int i = 0;
         int j = 0;
         while(i < word.length()){
@@ -34,8 +33,6 @@ public static void main(String [] args){
         System.out.println(canSpell("finallygotit", "fnfvainfjfldfldjndvngtvnjvoysdvjnsjysvgksvisvjntvsvnyvdvo"));
         System.out.println(!canSpell("aaaa", "babababbb"));
         System.out.println(canSpell("amazing", "gnifsfamfjfafkxzjfi"));
-
-
 }
 
 }
