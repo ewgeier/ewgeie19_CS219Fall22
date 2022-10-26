@@ -28,7 +28,7 @@ public class AverageSpeed {
         int count = 0;
         double average = 0.0;
         double maximum = 0.0;
-        double minimum = 100.0;
+        double minimum = Double.POSITIVE_INFINITY;
         // reads each line of web file
         while (true) {
 
