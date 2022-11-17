@@ -32,6 +32,7 @@ public class Exam {
         return words;
     }
 
+    /*
     public static String [] palindrome(String [] words) {
         for (int i = 0; i < words.length - 1; i++){
             if (words[i].charAt(0) != words[i].charAt(4) ||
@@ -40,7 +41,7 @@ public class Exam {
             }
         return words;
         }
-
+*/
 
     public static String[] reverse(String [] words){
         for (int i = 0; i < words.length/2; i++){
@@ -56,7 +57,7 @@ public class Exam {
 
     public static void main(String[] args) {
         String [] words = load_words("http://10.60.15.25/~ehar/cs219/wordle-nyt-solutions.txt", 2309);
-        System.out.println(reverse(palindrome(words)));
+        //System.out.println(reverse(palindrome(words)));
     }
 
 }
