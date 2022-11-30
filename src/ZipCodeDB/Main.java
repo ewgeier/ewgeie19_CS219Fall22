@@ -11,5 +11,14 @@ public class Main {
 
         Database db = new Database();
 
+        System.out.println(db.findByZip("13617"));
+        System.out.println(db.findByZip("13346"));
+        System.out.println(db.findByZip("hello"));
+
+        System.out.println(db.search("13617"));
+        System.out.println(db.search("43221"));
+
+        return;
+
     }
 }
