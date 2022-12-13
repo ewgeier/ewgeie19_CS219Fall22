@@ -11,7 +11,7 @@ import java.util.Scanner;
 /*
 Stores data on all of the zipcodes
  */
-public class Database {
+public class Database implements LatLngInterface {
 
     private ArrayList<Zipcode> codes;
 
@@ -76,6 +76,20 @@ public class Database {
                 return zipcode;
         }
         return null;
+    }
+
+    public Zipcode getNorthern(){
+        double max_lat = 0.0;
+        Zipcode north = codes.get(0);
+
+        for (int i = 1; i < codes.toArray().length-1; i++){
+            Zipcode code = codes.get(i);
+            if (code.lat > max_lat) {
+                max_lat = code.lat;
+                north = code;
+            }
+        }
+        return north;
     }
 
     private Zipcode bsearch(String target, int low, int high){
